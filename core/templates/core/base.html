@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'core/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'core/images/icon.png' %}">
+    {% block corecss %}
+        <link rel="stylesheet" href="{% static 'core/css/core.css' %}">
+    {% endblock corecss %}
+    <title>{% block title %}{% endblock title %}</title>
+    <style> 
+        a.nav-link{
+            color: aliceblue;
+        }
+        a.nav-link:hover{
+            color: black;
+            background-color: #e9cd79;
+        }
+        a.nav-link.active{
+            color: black;
+            background-color: #ffc107;
+            font-weight: bold;
+        }
+    </style>
+</head> 
+<body>
+    <div class="container-fluid bg-dark border">
+        <div class="row">
+            <div class="col-sm-2 border">
+                {% include 'core/sidebar.html' %}
+            </div>
+            <div class="col-sm-10">
+                {% block content %} {% endblock content %}
+            </div>
+        </div>
+    </div>
+    <footer class="text-center text-white" style="background-color: #21081a;">
+        <div class="text-center p-3">
+          © 2022 Copyright: Deep Kumar Goenka
+        </div>
+    </footer>
+    <script src="{% static 'core/js/jquery.js' %}"></script>
+    <script src="{% static 'core/js/popper.js' %}"></script>
+    <script src="{% static 'core/js/all.min.js' %}"></script>
+    <script src="{% static 'core/js/bootstrap.js' %}"></script>
+</body>
+</html>

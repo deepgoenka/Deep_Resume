@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Home | Deep Kumar Goenka{% endblock title %}
+{% block content %}
+    <div class="text-center mt-5">
+        <img src="{% static 'core/images/DEEP.jpeg' %}" alt="Deep" class="img-thumbnail" width="250px" height="250px">
+    </div> 
+    <div class="text-white mt-5 mx-5">
+        <h1 class="font-weight-bold st-font">Hello,</h1>
+        <div style="text-align: justify; line-height: 2rem" class="px-4">
+            <p style="text-indent: 100px">
+                I am <b class="text-warning">Deep Kumar Goenka</b> from the field of <b class="text-warning">Informtion Technology</b>. Currently completing my 3rd Year of B.Tech in Information Technology from St. Thomas College of Engineering & Technology, Kolkata.
+            </p>
+            <p>
+                Being an enthusiast and self motivated undergraduate, I am also a part-time Web Developer and Machine Learner. My current course of interest in on Artificial Intelligence and Machine Learning. And as I see myself as an AI/ML and Data Science Engineer in future so I am devoting my time to learn and understand the Artificial Intelligence and Machine Learning.
+            </p>
+            <p>
+                My hobbies includes Playing Cricket, Reading Books and Listening Songs.
+            </p>
+        </div>
+    </div>
+{% endblock content %}
+{% block corecss %}
+        <link rel="stylesheet" href="{% static 'core/css/course.css' %}">
+{% endblock corecss %}
